@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roboton</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="intro-container">
+        <h1>Roboton</h1>
+        <h2> Um emocionante jogo onde o bem luta contra o mal</h2>
+        <button id="play-btn">Jogar</button>
+    </div>
+
+    <div id="game-container" style="display: none">
+        <div id="benignoton-status">
+            Benignoton
+
+            <div class="paralyzed" style="{{ 'display: none' if benignoton.condicao != 'Paralisado' }}">Paralisado</div>
+            <div class="frozen" style="{{ 'display: none' if benignoton.condicao != 'Congelado' }}">Congelado</div>
+            <div class="burned" style="{{ 'display: none' if benignoton.condicao != 'Queimado' }}">Queimado</div>
+
+            <div class="health-bar">
+                {% if benignoton.vida_atual/benignoton.vida_max >= 0.5 %}
+                <div id="benignoton-current-health" class="health-bar" style="background-color: green; width: {{ 100 * benignoton.vida_atual / benignoton.vida_max }}%; height: 100%"></div>
+                {% elif benignoton.vida_atual/benignoton.vida_max >= 0.15 %}
+                <div id="benignoton-current-health" class="health-bar" style="background-color: yellow; width: {{ 100 * benignoton.vida_atual / benignoton.vida_max }}%; height: 100%"></div>
+                {% else %}
+                <div id="benignoton-current-health" class="health-bar" style="background-color: red; width: {{ 100 * benignoton.vida_atual / benignoton.vida_max }}%; height: 100%"></div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div id="malignoton-status">
+            Malignoton
+
+            <div class="paralyzed" style="{{ 'display: none' if malignoton.condicao != 'Paralisado' }}">Paralisado</div>
+            <div class="frozen" style="{{ 'display: none' if malignoton.condicao != 'Congelado' }}">Congelado</div>
+            <div class="burned" style="{{ 'display: none' if malignoton.condicao != 'Queimado' }}">Queimado</div>
+
+            <div class="health-bar">
+                {% if malignoton.vida_atual/malignoton.vida_max >= 0.5 %}
+                <div id="malignoton-current-health" class="health-bar" style="background-color: green; width: {{ 100 * malignoton.vida_atual / malignoton.vida_max }}%; height: 100%; "></div>
+                {% elif malignoton.vida_atual/malignoton.vida_max >= 0.15 %}
+                <div id="malignoton-current-health" class="health-bar" style="background-color: rgb(216, 216, 37)'; width: {{ 100 * malignoton.vida_atual / malignoton.vida_max }}%; height: 100%; "></div>
+                {% else %}
+                <div id="malignoton-current-health" class="health-bar" style="background-color: rgb(175, 31, 31); width: {{ 100 * malignoton.vida_atual / malignoton.vida_max }}%; height: 100%; "></div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div id="dialog">
+            <p>{{ dialog | safe }}</p>
+        </div>
+
+        <div id="log">
+            <textarea spellcheck="false" autocomplete="off" readonly>Log da batalha:
+</textarea>
+        </div>
+
+        <div id="movement-types">
+            <button id="offensives-btn">Movimentos ofensivos</button>
+            <button id="specials-btn">Movimentos especiais</button>
+        </div>
+
+        <div id="offensives-list">
+            {% for move in offensives %}
+                <button class="movement-btn" data-desc="{{ move['desc'] }}" data-power="{{ move['poder'] }}">{{ move['nome'] }}</button>
+            {% endfor %}
+        </div>
+
+        <div id="specials-list">
+            {% for move in specials %}
+                <button class="movement-btn" data-desc="{{ move['desc'] }}" data-power="{{ move['poder'] }}">{{ move['nome'] }}</button>
+            {% endfor %}
+        </div>
+
+        <div id="movement-description">
+            <p>Descrição do movimento</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+No Instituto de Tecnologia de Roma, havia dois ilustres professores: doutor Infinito e doutor Vereda, ambos renomados pesquisadores que lideravam todas as pesquisas da instituição. Todos os docentes e discentes estavam submetidos a eles. Mas o doutor Infinito era mais valorizado que o doutor Vereda, o que despertava uma profunda inveja neste, que tinha apenas 1/3 dos estudantes da universidade sob suas orientações, enquanto o doutor Infinito tinha os 2/3, que eram também os melhores estudantes da instituição.
+
+
+Certo dia, com o assassinato de sua filha pela máfia italiana, doutor Infinito, profundamente triste com o ocorrido, resolveu criar um projeto inusitado para combater o crime e promover o bem: uma tecnologia robótica chamada Roboton, da qual nasceria o Benignoton, que seria um ajudante robótico super poderoso capaz de ajudar as autoridades no combate ao crime. Para que fosse possível nascer o Benignoton, ele já sabia de antemão que a tecnologia Roboton precisava de uma fonte de energia para que o robô tivesse vida. Então, ele usou o sangue de sua própria filha para dar origem ao Benignoton, uma vez que ele já mantinha amostras do sangue dela armazenadas em refrigeradores altamente poderosos para pesquisas genéticas avançadas. Em 6 meses, o projeto Benignoton foi concluído, e no sétimo mês foi apresentado em público, com grande aprovação pelos cidadãos de Roma, que viam naquela obra uma esperança de dias melhores.
+
+
+Doutor Vereda soube do projeto após seu lançamento, e, invejoso com a grandeza da criação de doutor Infinito, ele resolve se apropriar indevidamente do Roboton para criar o Malignoton, um robô que serviria para ajudar no crime e promover a desordem. Para isso, ele entrou em contato com os dois melhores estudantes do doutor Infinito, um casal, que havia aceitado entregar a tecnologia Roboton por 30 gramas de prata. Ao invés de sangue humano para energizar essa nova criação, o doutor mistura venenos de diversas serpentes.
+
+
+Ao finalizar a criação do Malignoton, o doutor Vereda o pôs para atuar nas ruas da cidade sem aviso público, o que gerou uma disputa aciradíssima entre os dois robôs Benignoton e Malignoton.
